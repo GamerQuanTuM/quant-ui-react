@@ -1,7 +1,7 @@
 {
   "name": "quant-ui-react",
   "description": "Simple component library based on shadcn-ui and typescript",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",

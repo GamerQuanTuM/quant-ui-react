@@ -10,6 +10,7 @@ import { Badge } from "./Badge"
 import { Toast, ToastTrigger } from "./Toast"
 import { BarLoader, DotLoader, SpinnerLoader } from "./Loader"
 import { Radio } from "./Radio"
+import { Accordion, AccordionItem, AccordionTrigger } from "./Accordion"
 
 const CardComponent = {
     Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle
@@ -23,5 +24,9 @@ const Loader = {
     BarLoader, DotLoader, SpinnerLoader
 }
 
+const AccordionComponent = {
+    Accordion, AccordionItem, AccordionTrigger
+}
 
-export { Button, CardComponent, ModalComponent, Input, Checkbox, Seekbar, Otp, Avatar, Badge,Toast, ToastTrigger,Loader,Radio }
+
+export { Button, CardComponent, ModalComponent, Input, Checkbox, Seekbar, Otp, Avatar, Badge, Toast, ToastTrigger, Loader, Radio, AccordionComponent }

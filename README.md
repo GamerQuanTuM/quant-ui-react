@@ -191,10 +191,11 @@ yarn add quant-ui-react
 ## Usage
 
 ```js
-import { Button, CardComponent, Checkbox, Input, ModalComponent, Seekbar,Otp } from 'quant-ui';
+import { Button, CardComponent, Checkbox, Input, ModalComponent, Seekbar,Otp,AccordionComponent } from 'quant-ui';
 import "quant-ui-react/dist/styles.css"
 
 const { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } = CardComponent
+const { Accordion, AccordionItem, AccordionTrigger } = AccordionComponent
 
 const { ModalButton, ModalContent } = ModalComponent
 

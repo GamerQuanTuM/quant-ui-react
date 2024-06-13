@@ -1,6 +1,6 @@
 # quant-ui-react
 
-quant-ui is a collection of React components designed for building user interfaces with consistent styles and behaviors.
+quant-ui-react is a collection of React components designed for building user interfaces with consistent styles and behaviors.
 
 ## Installation
 

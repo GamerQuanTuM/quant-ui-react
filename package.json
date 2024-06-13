@@ -12,6 +12,16 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
+  "author": "Shuvam Santra",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GamerQuanTuM/quant-ui-react"
+  },
+  "bugs": {
+    "url": "https://github.com/GamerQuanTuM/quant-ui-react/issues"
+  },
+  "homepage": "https://github.com/GamerQuanTuM/quant-ui-react#readme",
   "keywords": [
     "shadcn-ui",
     "tailwindcss"

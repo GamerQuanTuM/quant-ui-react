@@ -184,20 +184,70 @@ yarn add quant-ui-react
 | iconColor | string     | "black"       | The color of the icon displayed next to the title (if any).           |
 | onOpen    | () => void | None          | Callback function triggered when the AccordionTrigger is clicked.     |
 
+## Select
 
+### Props
+
+| Name           | Type                                                  | Default Value | Description                                                   |
+| -------------- | ----------------------------------------------------- | ------------- | ------------------------------------------------------------- |
+| options        | Array<{ value: string; label: string }>               | **Required**  | Array of option objects, each containing `value` and `label`. |
+| label          | string                                                | None          | Optional label text for the select element.                   |
+| placeholder    | string                                                | None          | Placeholder text for the select element.                      |
+| labelClassName | string                                                | None          | Additional CSS classes for the label text.                    |
+| value          | string                                                | None          | The selected value of the select element.                     |
+| onChange       | (event: React.ChangeEvent<HTMLSelectElement>) => void | None          | Function called when the selected value changes.              |
+
+## ChipInput 
+
+### Props
+
+| Name                   | Type                      | Default Value | Description                                                 |
+| ---------------------- | ------------------------- | ------------- | ----------------------------------------------------------- |
+| chips                  | string[]                  | None          | Array of chip values to be displayed.                       |
+| onChipsChange          | (chips: string[]) => void | None          | Callback function to handle changes to the chips array.     |
+| inputClassName         | string                    | None          | Additional CSS classes for the input element.               |
+| chipClassName          | string                    | None          | Additional CSS classes for individual chips.                |
+| chipContainerClassName | string                    | None          | Additional CSS classes for the container holding the chips. |
+| label                  | string                    | None          | Label text for the input field.                             |
+| labelClassName         | string                    | None          | Additional CSS classes for the label text.                  |
+| isLabel                | boolean                   | false         | Specifies whether to show the label text.                   |
+| placeholder            | string                    | None          | Placeholder text for the input field.                       |
+| iconColor              | string                    | string        | "#FFF"                                                      | The color of the icon displayed next to the chip (if any). |
+
+## Carousel
+
+### Props
+
+| Name       | Type                          | Default | Description                                   |
+|------------|-------------------------------|---------|-----------------------------------------------|
+| `slides`   | `SlideProps[]`                | **Required** | Array of slide objects, each with `url` and `alt` properties. |
+| `loop`     | `boolean`                     | `false` | Enables automatic looping through slides.     |
+| `className`| `string`                      | `""`    | Additional CSS classes for the carousel.      |
+| `...props` | `React.HTMLAttributes<HTMLDivElement>` |  | Standard HTML attributes for a `div` element. |
+
+### SlideProps
+
+### Props
+
+| Name | Type                        | Description                           |
+|------|-----------------------------|---------------------------------------|
+| `url`| `string \| React.ReactElement` | URL of the image or a React element to display. |
+| `alt`| `string`                    | Alternative text for the image or React element. |
 
 
 
 ## Usage
 
 ```js
-import { Button, CardComponent, Checkbox, Input, ModalComponent, Seekbar,Otp,AccordionComponent } from 'quant-ui';
+import { Button, CardComponent, Checkbox, Input, ModalComponent, Seekbar,Otp,AccordionComponent,TextArea,SkeletonComponent,Select,ChipInput,Carousel } from 'quant-ui';
 import "quant-ui-react/dist/styles.css"
 
 const { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } = CardComponent
 const { Accordion, AccordionItem, AccordionTrigger } = AccordionComponent
 
 const { ModalButton, ModalContent } = ModalComponent
+
+const { SkeletonDiv, SkeletonImage } = SkeletonComponent
 
 // Example usage of Button component
 <Button variant="default" variantSize="lg" onClick={handleClick}>Click me</Button>
@@ -295,5 +345,43 @@ const { ModalButton, ModalContent } = ModalComponent
       className="tailwind-class"
     />
   </Accordion>
+
 </>
+
+// Example usage of Skeleton component
+<>
+  <SkeletonImage className='tailwind-class' />
+  <SkeletonDiv className='tailwind-class' />
+</>
+
+// Example usage of TextArea component
+<TextArea className='tailwind-class' />
+
+// Example usage of Select component
+<Select
+  options={options}
+  value={selectedOption}
+  onChange={handleChange}
+  label="Select a option"
+  placeholder="Choose an option"
+  className="tailwind-class"
+  labelClassName="tailwind-class"
+/>
+
+// Example usage of ChipInput component
+<ChipInput
+  chips={chips}
+  onChipsChange={setChips}
+  className='tailwind-class'
+  placeholder="Type and press Enter"
+  isLabel
+  label="Tags"
+  inputClassName="tailwind-class"
+  chipClassName="tailwind-class"
+  chipContainerClassName="tailwind-class"
+  iconColor={"red"}
+/>
+
+// Example usage of Carousel component
+<Carousel loop slides={image_Array} className="taiwind-css" />
 ```

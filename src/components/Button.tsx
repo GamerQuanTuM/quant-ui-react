@@ -3,7 +3,7 @@ import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "../lib/utils"
 
-type ButtonVariant = "default" | "danger" | "warning" | "success";
+type ButtonVariant = "default" | "danger" | "warning" | "success" | "secondary";
 type ButtonVariantSize = "default" | "sm" | "lg" | "icon";
 
 
@@ -19,9 +19,10 @@ const buttonVariants = (props: {
             variants: {
                 variant: {
                     default: "bg-blue-500 text-white hover:bg-blue-700",
+                    secondary: "bg-gray-300 text-white hover:bg-gray-400",
                     danger: "bg-red-500 text-white hover:bg-red-700",
                     warning: "bg-yellow-500 text-white hover:bg-yellow-700",
-                    success: "bg-green-500 text-white hover:bg-green-700"
+                    success: "bg-green-500 text-white hover:bg-green-700",
                 },
                 variantSize: {
                     default: "h-10 px-4 py-2",
@@ -37,7 +38,6 @@ const buttonVariants = (props: {
         }
     )({ variant, variantSize, className });
 };
-
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
